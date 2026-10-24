@@ -11,7 +11,7 @@
     "hough_dp": 1.2,
     "hough_param2": 22,
     "max_candidates": 8,
-    "radial_rays": 144,
+    "radial_rays": 96,
     "radial_search_fraction": 0.22,
     "radial_step_px": 0.5,
     "edge_strength_min": 2.0,
@@ -56,7 +56,7 @@
     }
   },
   "calibration": {
-    "max_tilt_deg": 12.0,
+    "max_tilt_deg": 14.0,
     "warn_tilt_deg": 8.0,
     "tilt_correction_min_deg": 8.0,
     "diameter_edge_floor_px": 0.5,
@@ -66,7 +66,7 @@
     "custom_reference_thickness_mm": 1.5
   },
   "capture": {
-    "frames_target": 24,
+    "frames_target": 12,
     "frames_min_accepted": 8,
     "max_frames_per_request": 120,
     "min_hand_length_fraction": 0.3,
@@ -78,22 +78,22 @@
       50,
       225
     ],
-    "max_landmark_jitter_fraction": 0.025,
-    "min_camera_distance_mm": 250.0,
+    "max_landmark_jitter_fraction": 0.035,
+    "min_camera_distance_mm": 350.0,
     "max_frame_rel_sd": 0.025
   },
   "live_scan": {
     "min_frame_interval_ms": 50,
-    "full_coin_search_every": 5,
+    "full_coin_search_every": 8,
     "track_min_confidence": 0.5,
     "palm_mask_grow": 1.1,
-    "mobile_frames_target": 16,
+    "mobile_frames_target": 10,
     "mobile_frames_min": 8,
     "timeout_s": 45,
     "early_stop_frames_mobile": 10,
-    "early_stop_frames_desktop": 14,
+    "early_stop_frames_desktop": 8,
     "early_stop_rel_sd": 0.018,
-    "early_stop_after_s": 8
+    "early_stop_after_s": 3
   },
   "uncertainty": {
     "landmark_model_input_px": 224,

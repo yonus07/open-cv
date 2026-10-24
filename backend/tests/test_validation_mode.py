@@ -510,8 +510,8 @@ def test_altered_config_snapshot_is_detected(operator_client, enabled):
     fp = operator_client.post("/api/validation/scans", json=body()).json()["record"]["config_fingerprint"]
     path = enabled.parent / "configs" / f"{fp}.json"
     text = path.read_text(encoding="utf-8")
-    assert '"max_tilt_deg": 12.0' in text
-    path.write_text(text.replace('"max_tilt_deg": 12.0', '"max_tilt_deg": 20.0'), encoding="utf-8")
+    assert '"max_tilt_deg": 14.0' in text
+    path.write_text(text.replace('"max_tilt_deg": 14.0', '"max_tilt_deg": 20.0'), encoding="utf-8")
     with pytest.raises(ValueError, match="does not match its fingerprint"):
         vr.load_config_snapshot(fp)
 
